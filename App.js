@@ -1,6 +1,14 @@
-import { useState } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, TextInput } from 'react-native';
-import logo from './components/Imagens/logoML.jpg';
+import { useState } from 'react'
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  Image,
+  TextInput,
+  TouchableOpacity
+} from 'react-native'
+import logo from './components/Imagens/logoML.jpg'
 import velocimetro from './components/Imagens/speedometer.png'
 import aviao from './components/Imagens/plane.png'
 import camisa from './components/Imagens/tshirt.png'
@@ -22,66 +30,91 @@ export default function App() {
 
       <View style={styles.buscaLogo}>
         <View style={styles.busca}>
-          <TextInput 
-          style={styles.barraBusca}
-          placeholder= '🔍 Buscar no Mercado Livre'
-          placeholderTextColor='#A0A0A0'
-          onChangeText={setBusca}
-          value={busca}
+          <TextInput
+            style={styles.barraBusca}
+            placeholder="🔍 Buscar no Mercado Livre"
+            placeholderTextColor="#A0A0A0"
+            onChangeText={setBusca}
+            value={busca}
           />
         </View>
         <View style={styles.logo}>
-          <Image source={logo} style={{ width: 200, height: 200}} />
+          <Image source={logo} style={{ width: 200, height: 200 }} />
         </View>
       </View>
 
       <View style={styles.main}>
-
         <View style={styles.categorias}>
           <View style={styles.categoria}>
-            <View style={styles.imagem}>
-              <Image source={velocimetro} style={styles.iconeCategoria} />
-            </View>
-            <Text style={styles.texto}>Acessórios  para Veículos</Text>
+            <TouchableOpacity>
+              <View style={styles.imagem}>
+                <Image source={velocimetro} style={styles.iconeCategoria} />
+              </View>
+            </TouchableOpacity>
+            <Text style={styles.texto}>Acessórios para Veículos</Text>
           </View>
 
           <View style={styles.categoria}>
-            <View style={styles.imagem}>
-              <Image source={aviao} style={styles.iconeCategoria} />
-            </View>
+            <TouchableOpacity>
+              <View style={styles.imagem}>
+                <Image source={aviao} style={styles.iconeCategoria} />
+              </View>
+            </TouchableOpacity>
             <Text style={styles.texto}>Brinquedos e Hobbies</Text>
           </View>
 
           <View style={styles.categoria}>
-            <View style={styles.imagem}>
-              <Image source={camisa} style={styles.iconeCategoria} />
-            </View>
+            <TouchableOpacity>
+              <View style={styles.imagem}>
+                <Image source={camisa} style={styles.iconeCategoria} />
+              </View>
+            </TouchableOpacity>
             <Text style={styles.texto}>Calçados, Roupas e Bols...</Text>
           </View>
 
           <View style={styles.categoria}>
-            <View style={styles.imagem}>
-              <Image source={carro} style={styles.iconeCategoria} />
-            </View>
+            <TouchableOpacity>
+              <View style={styles.imagem}>
+                <Image source={carro} style={styles.iconeCategoria} />
+              </View>
+            </TouchableOpacity>
             <Text style={styles.texto}>Carros, motos e Outros</Text>
           </View>
         </View>
 
         <View style={styles.produtos}>
-          <Image source={banco} style={styles.produto} />
-          <Image source={capacete} style={styles.produto} />
+          <TouchableOpacity>
+            <Image source={banco} style={styles.produto} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image source={capacete} style={styles.produto} />
+          </TouchableOpacity>
         </View>
       </View>
 
       <View style={styles.icones}>
-        <Image source={lupa} style={styles.icone} />
-        <Image source={coracao} style={styles.icone} />
-        <Image source={tag} style={styles.icone} />
-        <Image source={sino} style={styles.icone} />
-        <Image source={user} style={styles.icone} />
+        <TouchableOpacity>
+          <Image source={lupa} style={styles.icone} />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Image source={coracao} style={styles.icone} />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Image source={tag} style={styles.icone} />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Image source={sino} style={styles.icone} />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Image source={user} style={styles.icone} />
+        </TouchableOpacity>
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -89,14 +122,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
 
   buscaLogo: {
     width: '100%',
     height: '40%',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
 
   busca: {
@@ -129,7 +162,7 @@ const styles = StyleSheet.create({
     height: '60%',
     backgroundColor: '#f7f7f7',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-evenly'
   },
 
   categorias: {
@@ -150,7 +183,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 50,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   iconeCategoria: {
@@ -159,7 +192,7 @@ const styles = StyleSheet.create({
   },
 
   texto: {
-    color:'#A0A0A0',
+    color: '#A0A0A0',
     textAlign: 'center',
     fontSize: 12,
     fontWeight: '500'
@@ -190,4 +223,4 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30
   }
-});
+})
