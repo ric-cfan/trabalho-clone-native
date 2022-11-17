@@ -45,41 +45,41 @@ export default function App() {
 
       <View style={styles.main}>
         <View style={styles.categorias}>
-          <View style={styles.categoria}>
-            <TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.categoria}>
               <View style={styles.imagem}>
                 <Image source={velocimetro} style={styles.iconeCategoria} />
               </View>
-            </TouchableOpacity>
-            <Text style={styles.texto}>Acessórios para Veículos</Text>
-          </View>
+            <Text style={styles.texto}>  Acessórios  para Veículos</Text>
+            </View>
+          </TouchableOpacity>
 
-          <View style={styles.categoria}>
-            <TouchableOpacity>
-              <View style={styles.imagem}>
-                <Image source={aviao} style={styles.iconeCategoria} />
-              </View>
-            </TouchableOpacity>
-            <Text style={styles.texto}>Brinquedos e Hobbies</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.categoria}>
+                <View style={styles.imagem}>
+                  <Image source={aviao} style={styles.iconeCategoria} />
+                </View>
+              <Text style={styles.texto}>Brinquedos e Hobbies</Text>
+            </View>
+          </TouchableOpacity>
 
-          <View style={styles.categoria}>
-            <TouchableOpacity>
-              <View style={styles.imagem}>
-                <Image source={camisa} style={styles.iconeCategoria} />
-              </View>
-            </TouchableOpacity>
-            <Text style={styles.texto}>Calçados, Roupas e Bols...</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.categoria}>
+                <View style={styles.imagem}>
+                  <Image source={camisa} style={styles.iconeCategoria} />
+                </View>
+              <Text style={styles.texto}>Calçados, Roupas e Bols...</Text>
+            </View>
+          </TouchableOpacity>
 
-          <View style={styles.categoria}>
-            <TouchableOpacity>
-              <View style={styles.imagem}>
-                <Image source={carro} style={styles.iconeCategoria} />
-              </View>
-            </TouchableOpacity>
-            <Text style={styles.texto}>Carros, motos e Outros</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.categoria}>
+                <View style={styles.imagem}>
+                  <Image source={carro} style={styles.iconeCategoria} />
+                </View>
+              <Text style={styles.texto}>Carros, motos e Outros</Text>
+            </View>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.produtos}>
@@ -165,6 +165,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
 
+  
+
   categorias: {
     width: '100%',
     flexDirection: 'row',
@@ -172,9 +174,10 @@ const styles = StyleSheet.create({
   },
 
   categoria: {
-    width: 90,
+    width: 85,
     height: 130,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
 
   imagem: {
